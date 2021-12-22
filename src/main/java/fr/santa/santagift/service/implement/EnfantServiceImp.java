@@ -2,13 +2,17 @@ package fr.santa.santagift.service.implement;
 
 import fr.santa.santagift.dto.EnfantDto;
 import fr.santa.santagift.model.Enfant;
+import fr.santa.santagift.model.Souhait;
+import fr.santa.santagift.model.Status;
 import fr.santa.santagift.repository.EnfantRepository;
 import fr.santa.santagift.service.IEnfantService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -28,8 +32,9 @@ public class EnfantServiceImp implements IEnfantService {
     }
 
     @Override
+    @Transactional
     public Optional<EnfantDto> findById(Long id) {
-        Optional<Enfant> optEnfant= enfantRepository.findById(id);
+        Optional<Enfant> optEnfant = enfantRepository.findById(id);
         return optEnfant.map(enfant -> modelMapper.map(enfant, EnfantDto.class));
     }
 
@@ -43,8 +48,8 @@ public class EnfantServiceImp implements IEnfantService {
     }
 
     @Override
-    public Optional<EnfantDto> update(Long id, EnfantDto enfantDto) {
-        return findById(id)
+    public Optional<EnfantDto> update(EnfantDto enfantDto) {
+        return findById(enfantDto.getId())
                 .map(enfant -> {
                     enfant.setNom(enfantDto.getNom());
                     enfant.setPrenom(enfantDto.getPrenom());
@@ -52,4 +57,11 @@ public class EnfantServiceImp implements IEnfantService {
                 })
                 .map(enfant -> modelMapper.map(enfant, EnfantDto.class));
     }
+
+    @Override
+    public void delete(Long id) {
+        enfantRepository.deleteById(id);
+    }
 }
+
+

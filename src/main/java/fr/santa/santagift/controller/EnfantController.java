@@ -34,10 +34,16 @@ public class EnfantController {
         return ResponseEntity.ok(enfantService.findAll());
     }
     @PutMapping("/{id}")
-    public ResponseEntity<EnfantDto> updateEnfant(@PathVariable Long id, @RequestBody EnfantDto enfantDto) {
-        Optional<EnfantDto> optionalEnfantDto = enfantService.update(id, enfantDto);
+    public ResponseEntity<EnfantDto> updateEnfant(@RequestBody EnfantDto enfantDto) {
+        Optional<EnfantDto> optionalEnfantDto = enfantService.update(enfantDto);
         return optionalEnfantDto.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.badRequest().build());
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteEnfant(@PathVariable Long id) {
+        enfantService.delete(id);
+        return ResponseEntity.ok().build();
     }
 
 }

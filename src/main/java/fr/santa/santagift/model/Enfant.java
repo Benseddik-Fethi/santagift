@@ -1,13 +1,15 @@
 package fr.santa.santagift.model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 
 @Entity
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -21,7 +23,8 @@ public class Enfant {
     private String prenom;
     @OneToMany(fetch = FetchType.EAGER,
             cascade = CascadeType.ALL)
-    private List<Souhait> souhaitList;
-    @OneToMany
-    private List<Cadeau> cadeauList;
+    private Set<Souhait> souhaitList;
+    @OneToMany(fetch = FetchType.EAGER,
+            cascade = CascadeType.ALL)
+    private Set<Cadeau> cadeauList;
 }

@@ -10,5 +10,6 @@ public interface IEnfantService {
     Optional<EnfantDto>save(EnfantDto enfantDto);
     Optional<EnfantDto>findById(Long id);
     List<EnfantDto>findAll();
-    Optional<EnfantDto> update(Long id, EnfantDto enfantDto);
+    Optional<EnfantDto> update(EnfantDto enfantDto);
+    void delete(Long id);
 }
