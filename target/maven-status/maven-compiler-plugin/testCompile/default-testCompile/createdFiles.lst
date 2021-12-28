@@ -1,0 +1,4 @@
+fr\santa\santagift\controller\EnfantControllerTest.class
+fr\santa\santagift\repository\EnfantRepositoryTest.class
+fr\santa\santagift\SantagiftApplicationTests.class
+fr\santa\santagift\service\implement\EnfantServiceImpTest.class

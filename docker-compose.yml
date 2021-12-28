@@ -8,9 +8,9 @@ services:
     networks:
       - santa
     depends_on:
-      - db
+      - maria
 
-  db:
+  maria:
     image: mariadb
     ports:
       - "3306:3306"

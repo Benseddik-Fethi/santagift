@@ -2,22 +2,20 @@ package fr.santa.santagift.repository;
 
 import fr.santa.santagift.SantagiftApplication;
 import fr.santa.santagift.model.Enfant;
-import org.junit.FixMethodOrder;
+import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = SantagiftApplication.class)
 
+@SpringBootTest
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class EnfantRepositoryTest {
 
 
@@ -47,7 +45,7 @@ class EnfantRepositoryTest {
         Enfant enfant = Enfant.builder().nom("John").prenom("Doe").build();
         enfantRepository.save(enfant);
         enfantRepository.deleteById(enfant.getId());
-        assertEquals(6, enfantRepository.findAll().size());
+        assertEquals(5, enfantRepository.findAll().size());
     }
 
     @Test
