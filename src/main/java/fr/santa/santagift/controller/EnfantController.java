@@ -13,7 +13,7 @@ import java.util.Optional;
 @RequestMapping("/enfant")
 @RequiredArgsConstructor
 public class EnfantController {
-
+    //test gitflow
     private final IEnfantService enfantService;
 
     @PostMapping("")
@@ -29,10 +29,12 @@ public class EnfantController {
         return optionalEnfantDto.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
+
     @GetMapping
     public ResponseEntity<List<EnfantDto>> getAllEnfant() {
         return ResponseEntity.ok(enfantService.findAll());
     }
+
     @PutMapping("/{id}")
     public ResponseEntity<EnfantDto> updateEnfant(@RequestBody EnfantDto enfantDto) {
         Optional<EnfantDto> optionalEnfantDto = enfantService.update(enfantDto);
