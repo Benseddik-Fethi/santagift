@@ -1,5 +1,4 @@
 D:\Gitlab\santagift\src\main\java\fr\santa\santagift\model\Cadeau.java
-D:\Gitlab\santagift\src\main\java\fr\santa\santagift\service\implement\PereNoelServiceImp.java
 D:\Gitlab\santagift\src\main\java\fr\santa\santagift\model\PereNoel.java
 D:\Gitlab\santagift\src\main\java\fr\santa\santagift\dto\CadeauDto.java
 D:\Gitlab\santagift\src\main\java\fr\santa\santagift\dto\SouhaitDto.java
@@ -7,17 +6,9 @@ D:\Gitlab\santagift\src\main\java\fr\santa\santagift\controller\EnfantController
 D:\Gitlab\santagift\src\main\java\fr\santa\santagift\model\Enfant.java
 D:\Gitlab\santagift\src\main\java\fr\santa\santagift\service\implement\EnfantServiceImp.java
 D:\Gitlab\santagift\src\main\java\fr\santa\santagift\model\Souhait.java
-D:\Gitlab\santagift\src\main\java\fr\santa\santagift\repository\PereNoelRepository.java
-D:\Gitlab\santagift\src\main\java\fr\santa\santagift\repository\SouhaitRepository.java
-D:\Gitlab\santagift\src\main\java\fr\santa\santagift\service\implement\CadeauServiceImp.java
 D:\Gitlab\santagift\src\main\java\fr\santa\santagift\dto\EnfantDto.java
-D:\Gitlab\santagift\src\main\java\fr\santa\santagift\repository\CadeauRepository.java
-D:\Gitlab\santagift\src\main\java\fr\santa\santagift\service\ICadeauService.java
 D:\Gitlab\santagift\src\main\java\fr\santa\santagift\service\IEnfantService.java
 D:\Gitlab\santagift\src\main\java\fr\santa\santagift\config\ApplicationConfig.java
-D:\Gitlab\santagift\src\main\java\fr\santa\santagift\service\IPereNoelService.java
 D:\Gitlab\santagift\src\main\java\fr\santa\santagift\repository\EnfantRepository.java
 D:\Gitlab\santagift\src\main\java\fr\santa\santagift\model\Status.java
 D:\Gitlab\santagift\src\main\java\fr\santa\santagift\SantagiftApplication.java
-D:\Gitlab\santagift\src\main\java\fr\santa\santagift\service\implement\SouhaitServiceImp.java
-D:\Gitlab\santagift\src\main\java\fr\santa\santagift\service\ISouhaitService.java

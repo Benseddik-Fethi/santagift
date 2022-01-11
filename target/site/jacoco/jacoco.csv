@@ -1,0 +1,17 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+santagift,fr.santa.santagift,SantagiftApplication,5,3,0,0,2,1,1,1,1,1
+santagift,fr.santa.santagift.config,ApplicationConfig,0,7,0,0,0,2,0,2,0,2
+santagift,fr.santa.santagift.dto,CadeauDto,16,24,0,0,2,5,2,7,2,7
+santagift,fr.santa.santagift.dto,SouhaitDto,9,17,0,0,1,4,1,5,1,5
+santagift,fr.santa.santagift.dto,EnfantDto.EnfantDtoBuilder,27,27,0,0,0,1,4,4,4,4
+santagift,fr.santa.santagift.dto,CadeauDto.CadeauDtoBuilder,36,0,0,0,1,0,6,0,6,0
+santagift,fr.santa.santagift.dto,EnfantDto,197,60,46,0,0,9,27,13,4,13
+santagift,fr.santa.santagift.service.implement,EnfantServiceImp,31,77,0,0,6,12,3,9,3,9
+santagift,fr.santa.santagift.model,Cadeau.CadeauBuilder,45,0,0,0,1,0,7,0,7,0
+santagift,fr.santa.santagift.model,Cadeau,38,12,0,0,4,4,7,4,7,4
+santagift,fr.santa.santagift.model,Enfant.EnfantBuilder,27,27,0,0,0,1,4,4,4,4
+santagift,fr.santa.santagift.model,Status,0,24,0,0,0,3,0,1,0,1
+santagift,fr.santa.santagift.model,PereNoel,207,3,38,0,6,1,32,1,13,1
+santagift,fr.santa.santagift.model,Souhait,113,54,27,3,1,5,22,5,7,5
+santagift,fr.santa.santagift.model,Enfant,197,60,46,0,0,9,27,13,4,13
+santagift,fr.santa.santagift.controller,EnfantController,18,45,0,0,3,10,3,6,3,6

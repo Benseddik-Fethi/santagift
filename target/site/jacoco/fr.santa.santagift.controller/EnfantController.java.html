@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EnfantController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">santagift</a> &gt; <a href="index.source.html" class="el_package">fr.santa.santagift.controller</a> &gt; <span class="el_source">EnfantController.java</span></div><h1>EnfantController.java</h1><pre class="source lang-java linenums">package fr.santa.santagift.controller;
+
+import fr.santa.santagift.dto.EnfantDto;
+import fr.santa.santagift.service.IEnfantService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Optional;
+
+@RestController
+@RequestMapping(&quot;/enfant&quot;)
+<span class="fc" id="L14">@RequiredArgsConstructor</span>
+public class EnfantController {
+    private final IEnfantService enfantService;
+
+    @PostMapping(&quot;&quot;)
+    public ResponseEntity&lt;EnfantDto&gt; addEnfant(@RequestBody EnfantDto enfantDto) {
+<span class="fc" id="L20">        Optional&lt;EnfantDto&gt; optionalEnfantDto = enfantService.save(enfantDto);</span>
+<span class="fc" id="L21">        return optionalEnfantDto.map(ResponseEntity::ok)</span>
+<span class="pc" id="L22">                .orElseGet(() -&gt; ResponseEntity.badRequest().build());</span>
+    }
+
+    @GetMapping(&quot;/{id}&quot;)
+    public ResponseEntity&lt;EnfantDto&gt; getEnfant(@PathVariable Long id) {
+<span class="fc" id="L27">        Optional&lt;EnfantDto&gt; optionalEnfantDto = enfantService.findById(id);</span>
+<span class="fc" id="L28">        return optionalEnfantDto.map(ResponseEntity::ok)</span>
+<span class="fc" id="L29">                .orElseGet(() -&gt; ResponseEntity.notFound().build());</span>
+    }
+
+    @GetMapping
+    public ResponseEntity&lt;List&lt;EnfantDto&gt;&gt; getAllEnfant() {
+<span class="fc" id="L34">        return ResponseEntity.ok(enfantService.findAll());</span>
+    }
+
+    @PutMapping(&quot;/{id}&quot;)
+    public ResponseEntity&lt;EnfantDto&gt; updateEnfant(@RequestBody EnfantDto enfantDto) {
+<span class="nc" id="L39">        Optional&lt;EnfantDto&gt; optionalEnfantDto = enfantService.update(enfantDto);</span>
+<span class="nc" id="L40">        return optionalEnfantDto.map(ResponseEntity::ok)</span>
+<span class="nc" id="L41">                .orElseGet(() -&gt; ResponseEntity.badRequest().build());</span>
+    }
+
+    @DeleteMapping(&quot;/{id}&quot;)
+    public ResponseEntity&lt;Void&gt; deleteEnfant(@PathVariable Long id) {
+<span class="fc" id="L46">        enfantService.delete(id);</span>
+<span class="fc" id="L47">        return ResponseEntity.ok().build();</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

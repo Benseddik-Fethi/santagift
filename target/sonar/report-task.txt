@@ -1,0 +1,6 @@
+projectKey=fr.santa:santagift
+serverUrl=http://localhost:9000
+serverVersion=9.2.4.50792
+dashboardUrl=http://localhost:9000/dashboard?id=fr.santa%3Asantagift
+ceTaskId=AX5HfZVsjldtn5eeJdaj
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AX5HfZVsjldtn5eeJdaj

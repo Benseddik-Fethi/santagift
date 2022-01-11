@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: fr.santa.santagift.controller.EnfantControllerTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.882 s - in fr.santa.santagift.controller.EnfantControllerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.887 s - in fr.santa.santagift.controller.EnfantControllerTest
